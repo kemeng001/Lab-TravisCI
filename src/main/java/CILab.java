@@ -17,13 +17,15 @@ public class CILab implements CILabInterface {
             return false;
         }
 
-        if (myString.equals(myString.toUpperCase()) ||
-                myString.equals(myString.toLowerCase()) ||
-                Character.isUpperCase(myString.charAt(0)) && myString.substring(1).equals(myString.substring(1).toLowerCase())) {
-            return true;
+        String[] words = myString.split(" ");
+        for (String word : words) {
+            if (!Character.isUpperCase(word.charAt(0)) || 
+                !word.substring(1).equals(word.substring(1).toLowerCase())) {
+                return false;
+            }
         }
 
-        return false;
+        return true;
     }
 }
 
