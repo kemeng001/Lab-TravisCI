@@ -33,13 +33,27 @@ public class CILabTest {
 
     @Test
     public void detectCapitalUseTest3() {
-        myString.setString("A");
-        assertTrue(myString.detectCapitalUse());
+        myString.setString("About something");
+        assertFalse(myString.detectCapitalUse());
     }
 
     @Test
     public void detectCapitalUseTest4() {
-        myString.setString("a");
+        myString.setString("About Something");
+        assertTrue(myString.detectCapitalUse());
+    }
+    
+    @Test
+    public void detectCapitalUseTest4() {
+        myString.setString("about something");
         assertFalse(myString.detectCapitalUse());
     }
+    
+    @Test
+    public void detectCapitalUseTestEmpty() {
+        myString.setString(null);
+        assertFalse(myString.detectCapitalUse());
+    }
+    
+    
 }
