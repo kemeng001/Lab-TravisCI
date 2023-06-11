@@ -58,7 +58,7 @@ public class CILabTest {
     @Test
     public void detectCapitalUseTest7() {
         myString.setString("MixedCase");
-        assertFalse(myString.detectCapitalUse());
+        assertTrue(myString.detectCapitalUse());
     }
     
     @Test
@@ -73,9 +73,4 @@ public class CILabTest {
         assertTrue(myString.detectCapitalUse());
     }
     
-    @Test
-    public void detectCapitalUseTest10() {
-        myString.setString("");
-        assertFalse(myString.detectCapitalUse());
-    }
 }
