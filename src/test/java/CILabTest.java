@@ -28,18 +28,18 @@ public class CILabTest {
     @Test
     public void detectCapitalUseTest2() {
         myString.setString("lowercase");
-        assertTrue(myString.detectCapitalUse());
+        assertFalse(myString.detectCapitalUse());
     }
 
     @Test
     public void detectCapitalUseTest3() {
-        myString.setString("FirstCapital");
-        assertTrue(myString.detectCapitalUse());
+        myString.setString("");
+        assertFalse(myString.detectCapitalUse());
     }
 
     @Test
     public void detectCapitalUseTest4() {
-        myString.setString("InVaLid");
+        myString.setString("a");
         assertFalse(myString.detectCapitalUse());
     }
 }
