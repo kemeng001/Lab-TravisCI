@@ -23,8 +23,7 @@ public boolean detectCapitalUse() {
 
     String[] words = myString.split(" ");
     for (String word : words) {
-        if (!Character.isUpperCase(word.charAt(0)) || 
-            !word.substring(1).equals(word.substring(1).toLowerCase())) {
+        if (!Character.isUpperCase(word.charAt(0))) {
             return false;
         }
     }
