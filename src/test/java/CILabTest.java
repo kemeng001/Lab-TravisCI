@@ -44,13 +44,13 @@ public class CILabTest {
     }
     
     @Test
-    public void detectCapitalUseTest4() {
+    public void detectCapitalUseTest5() {
         myString.setString("about something");
         assertFalse(myString.detectCapitalUse());
     }
     
     @Test
-    public void detectCapitalUseTestEmpty() {
+    public void detectCapitalUseTest6() {
         myString.setString(null);
         assertFalse(myString.detectCapitalUse());
     }
