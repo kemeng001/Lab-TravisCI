@@ -19,7 +19,7 @@ jdk: openjdk11
 # Jacoco needs  mvn clean verify to run
 jobs:
   include:
-    - script: mvn clean verify package
+    - script: mvn clean install -Dmaven.compiler.source=1.6 -Dmaven.compiler.target=1.6
 
 # This is to enable CodeCov's coverage
 # If a build is successful, the code is submitted for coverage analysis
